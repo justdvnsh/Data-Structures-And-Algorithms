@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdbool.h>
+// stdbool library is to the bool data type in C.
 
 int main() {
 
@@ -45,6 +47,20 @@ int main() {
     // strcmp -> to compare two strings.
     int result = strcmp(string1, string2);
     printf("The second string differs from the first string by %c letters. \n", result);
+
+    // also there is a concat function in c , since we cannot use the + operator for this.
+    printf("The concatenated string is -> %s \n", strcat(string1, string2));
+    printf("%s .... %s \n", string1, string2);
+    // here the first string is changed since we concatenated the second string to first . This function takes in pointers and
+    // changes the pointer values of the vars.
+
+    // to read chars or strings from the standard input we can also use gets and getchar functions.
+    // scanf function does not read spaces , from the standard input, thus we use gets or getchar methods.
+    char input_string[100];
+    gets(input_string);
+    printf("The entered values was -> %s \n", input_string);
+
+    printf("The char entered was -> %c \n", getchar());
 
     return 0;
 }
